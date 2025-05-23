@@ -1,0 +1,187 @@
+.Job_Page {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+
+    .employerbox {
+        position: relative;
+        left: 850px;
+        width: 300px;
+        border-bottom: 20px solid #023020;
+        //#023020
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        h2 {
+            color: #fff;
+            padding: 10px 20px;
+            background: #023020;
+            font-size: 20px;
+            font-weight: 700;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+
+        }
+
+        ul {
+            position: relative;
+            background: #fff;
+            margin-top: -17px;
+
+        }
+
+        ul li {
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            list-style: none;
+            padding: 10px;
+            margin-left: -39px;
+            padding: 10px;
+            width: 107%;
+            background: #fff;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, .1);
+            transition: transform 0.5s;
+        }
+
+        ul:hover li {
+            opacity: 0.2;
+        }
+
+        ul li:hover {
+            transform: scale(1.1);
+            z-index: 100;
+            //background: #25bcff;
+            background: #343434;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
+            color: #fff;
+            opacity: 1;
+
+        }
+
+        ul li span {
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            background: #343434;
+            color: #fff;
+            display: inline-block;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            transform: translateY(-2px);
+        }
+
+        ul li:hover span {
+            background: #fff;
+            background: #343434;
+
+        }
+    } 
+
+    .job_heading {
+        position: absolute;
+        top: 188px;
+        left: 366px;
+        color: #023020;
+        //background: #343434;
+        transition: color 0.5s ease-in-out;
+        animation: textAnimation 1.5s infinite alternate;
+    }
+
+    @keyframes textAnimation {
+        0% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+    }
+
+    .JobForm_button {
+        position: absolute;
+        right: 440px;
+        top: 193px;
+
+    }
+
+
+    .jobpage_footer {
+        position: absolute;
+        bottom: 0;
+        // width: 100px;
+        width: 84vw;
+        left: 207px;
+        margin-bottom: 0;
+        background-color: #1f1f1f;
+        color: #ffffff;
+        padding: 0px;
+        font-size: 14px;
+        text-align: center;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 5px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .separator {
+            margin: 0 5px;
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            height: auto;
+
+            a,
+            .separator {
+                margin: 5px;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .Job_Page {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .job_heading,
+        .JobForm_button {
+            position: static;
+            margin-top: 20px;
+            text-align: center;
+            color: #0e8c7f;
+        }
+
+        .jobpage_footer {
+            width: 100%;
+            left: 0;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .jobpage_footer a,
+        .jobpage_footer .separator {
+            margin: 5px;
+        }
+    }
+
+
+}

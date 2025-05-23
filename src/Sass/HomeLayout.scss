@@ -1,0 +1,161 @@
+.background-div{
+    height: 55px;
+    width: 100vw;
+    background-color: #1995AD;
+}
+.home-page-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color:#dcf0f5;
+    // background: linear-gradient(to bottom, #1995AD, #A1D6E2,#F1F1F2);  
+}
+
+
+.home-page-cards .home-page-col-one {
+    width: 20%;
+    overflow: hidden;
+}
+
+.home-page-cards .home-page-col-two {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 42%;
+    background-color:#dcf0f5;
+    border-radius: 8px;
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.home-page-cards .home-page-col-three {
+    width: 30%;
+}
+
+.col-one-card-one-home {
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px;
+    padding-bottom: 10px;
+    // background: white;
+    border-radius: 12px;
+    // box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    // color: black;
+    display: flex;
+    flex-direction: column;
+
+    //background-color: #0e8c7f;
+    //background-color: #03a9f4;
+ background-color: #dcf0f5;
+ border:  #2E9FB5 10px solid;
+  // background: linear-gradient(to left, #A1D6E2,#F1F1F2); 
+  // border: 1px solid #1995AD;
+ 
+
+    transition: background-color 0.3s ease;
+    color: #000000;
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    .col-one-card-name {
+        font-family: 'Roboto', sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    .col-one-card-headline {
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    .col-one-card-aboutme {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        text-align: left;
+        margin-bottom: 0px;
+    }
+
+    .col-one-card-info {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        text-align: left;
+        // padding-left: 10px;
+        margin-bottom: 0px;
+    }
+
+    .col-one-card-info a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+
+
+}
+
+
+.col-one-card-one-home b {
+    color: #000000;
+    /* Set color for <b> tags */
+}
+
+
+.col-one-card-one-home:hover {
+    // background-color: #0e8c7f;
+    // /* Change background color on hover */
+    // transition: background-color 0.3s ease;
+    // /* Smooth transition */
+    // color: #fff;
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.col-three-card-one {
+    margin-right: 20px;
+    margin-top: 20px;
+    background-color: #dcf0f5;
+    height: 320px;
+    border-radius: 8px;
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    align-items: center;
+}
+
+
+
+
+.ad-img {
+    width: 95%;
+    height: 95%;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    .home-page-cards {
+        padding: 20px;
+    }
+
+    .home-page-cards .home-page-col-one {
+        width: 119%;
+        margin-bottom: 20px;
+        margin-right: 1px;
+        margin-left: -20px;
+    }
+
+    .home-page-cards .home-page-col-two {
+        padding: 0px;
+        width: 100%;
+    }
+
+    .home-page-cards .home-page-col-three {
+        display: none;
+    }
+
+}

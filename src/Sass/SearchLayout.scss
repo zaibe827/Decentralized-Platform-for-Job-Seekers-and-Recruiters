@@ -1,0 +1,122 @@
+$searchBoxBackgroundColor: #f2f4f8;
+$searchBoxBorderColor: #d1d9e6;
+$searchBoxBorderRadius: 4px;
+$searchBoxPadding: 10px;
+$searchBoxPlaceholderColor: #a9a9a9;
+$buttonPrimaryColor: #333;
+$buttonSecondaryColor: #444;
+
+.search-page-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.search-page-cards .search-page-col-one {
+  width: 25%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.search-page-cards .search-page-col-two {
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  width: 75%;
+  background-color: rgba(255, 255, 255, 0.95);
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.col-one-card-one {
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+  height: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  .search-box {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 10px;
+    input[type="text"] {
+      width: calc(100% - 20px);
+      padding: $searchBoxPadding;
+      border: 1px solid $searchBoxBorderColor;
+      border-radius: $searchBoxBorderRadius;
+      background-color: $searchBoxBackgroundColor;
+      font-size: 16px;
+      color: #333;
+      outline: none;
+      transition: border-color 0.3s ease-in-out;
+      
+      &::placeholder {
+        color: $searchBoxPlaceholderColor;
+      }
+      
+      &:focus {
+        border-color: $buttonPrimaryColor;
+      }
+    }
+
+    .label {
+      font-size: 16px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: $searchBoxBorderRadius;
+      background: linear-gradient(to right, $buttonPrimaryColor, $buttonSecondaryColor);
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      outline: none;
+
+      &:hover {
+        background: linear-gradient(to right, $buttonSecondaryColor, $buttonPrimaryColor);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .search-page-cards {
+    flex-direction: column;
+  }
+
+  .search-page-cards .search-page-col-one {
+    width: 90%;
+    margin-top: 10px;
+    margin-left: 0px;
+    padding: 5px;
+  }
+
+  .search-page-cards .search-page-col-two {
+    width: 80%;
+    margin-left: 20px;
+  }
+
+  .col-one-card-one .search-box {
+    width: 75%;
+  }
+}

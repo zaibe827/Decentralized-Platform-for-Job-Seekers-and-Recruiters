@@ -1,0 +1,395 @@
+.profile-card {
+    width: auto;
+    height: auto;
+    background-color: #c0ebf6;
+    border: 1px #1995AD solid;
+    margin: 30px;
+    border-radius: 5px;
+    padding: 17px;
+    position: relative;
+    margin-bottom: 84px;
+
+    transition: transform 0.3s ease;
+
+    .profile-info {
+        display: flex;
+        justify-content: space-between;
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            border-radius: 50%;
+            border: 6px solid #1995AD;
+            padding: 5px;
+            cursor: pointer;
+
+        }
+
+
+
+        .right-info {
+            margin-top: 25px;
+            margin-right: 20px;
+
+            .college,
+            .company,
+            .past-exp {
+                font-family: system-ui;
+                color: rgba(0, 0, 0, 0.9);
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 24px;
+            }
+
+
+
+            .company {
+                margin-top: -15px;
+            }
+
+        }
+
+    }
+
+    .website {
+        color: #004c75 !important;
+        -webkit-link: #004c75;
+    }
+
+    .skill-label {
+        font-weight: 600;
+    }
+
+    .skill-label b {
+        color: black;
+    }
+
+
+    .userName {
+        font-family: system-ui;
+        color: rgba(0, 0, 0, 0.9);
+        font-weight: 600;
+        font-size: 24px;
+        margin-top: 10px;
+    }
+
+    .heading {
+        margin-top: -25px;
+        font-family: system-ui;
+        font-size: 16px;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.9);
+        width: 320px;
+        line-height: 20px;
+    }
+
+    .vision,
+    .mission {
+        margin-top: 20px;
+
+    }
+
+
+    .vision-label,
+    .mission-label {
+        font-weight: 600;
+        color: #333;
+
+    }
+
+
+    .edit-btn {
+        position: absolute;
+        right: 20px;
+
+        .edit-icon {
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .edit-icon:hover {
+            background-color: rgb(197, 197, 197);
+            padding: 10px;
+            border-radius: 50%;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .profile-card {
+            height: 100%;
+        }
+
+        .profile-info {
+            flex-direction: column;
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        .profile-info {
+            flex-direction: column;
+
+            .profile-image {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    }
+}
+
+
+.profile-card:hover {
+    // background-color: #0e8c7f;
+    background-color: #9ed6e4;
+    transition: background-color 0.3s ease;
+    color: #000000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    transform: translateY(-5px);
+
+}
+
+.profile-card:hover .userName {
+    color: #2d2c2c;
+}
+
+.profile-card:hover .heading {
+    color: #2d2c2c;
+}
+
+.profile-card:hover .website {
+    color: #2d2c2c;
+}
+
+.profile-card:hover .right-info .college {
+    color: #2d2c2c;
+}
+
+.profile-card:hover .right-info .company {
+    color: #2d2c2c;
+}
+
+.profile-card:hover .right-info .past-exp {
+    color: #2d2c2c;
+}
+
+
+
+.profile-card:hover .skill-label {
+    font-weight: bold;
+}
+
+
+.profile-card:hover .edit-icon {
+    background-color: rgb(197, 197, 197);
+    border-radius: 50%;
+}
+
+.profile-text-para {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 70px;
+    right: 64px;
+}
+
+.profile-text-para .profile-text ul {
+    position: relative;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    li {
+        list-style: none;
+        color: #484848;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 2.1em;
+        letter-spacing: 15px;
+        animation: animate 4s linear infinite;
+
+
+    }
+
+}
+
+@keyframes animate {
+    0% {
+        color: #484848;
+        text-shadow: none;
+    }
+
+    90% {
+        color: #484848;
+        text-shadow: none;
+    }
+
+    100% {
+        // color: #0e8c7f;
+        color: #03a9f4;
+        text-shadow: 0 0 7px #03a9f4, 0 0 0 50px #03a9f4;
+    }
+}
+
+.profile-text-para .profile-text ul li:nth-child(1) {
+    //d
+    animation-delay: .2s;
+}
+
+.profile-text-para .profile-text ul li:nth-child(2) {
+    //e
+    animation-delay: .4s;
+}
+
+.profile-text-para .profile-text ul li:nth-child(3) {
+    //c
+    animation-delay: .6s;
+}
+
+.profile-text-para .profile-text ul li:nth-child(4) {
+    //e
+    animation-delay: .8s;
+}
+
+.profile-text-para .profile-text ul li:nth-child(5) {
+    //n
+    animation-delay: 1s;
+}
+
+.profile-text-para .profile-text ul li:nth-child(6) {
+    //t
+    animation-delay: 1.2s;
+}
+
+.profile-text-para .profile-text ul li:nth-child(7) {
+    //r
+    animation-delay: 1.4s;
+}
+
+.profile-text-para .profile-text ul li:nth-child(8) {
+    //a
+    animation-delay: 1.6s;
+}
+
+.profile-text-para .profile-text ul li:nth-child(9) {
+    //l
+    animation-delay: 1.8s;
+}
+
+.profile-text-para .profile-text ul li:nth-child(10) {
+    //i
+    animation-delay: 2s;
+}
+
+.profile-text-para .profile-text ul li:nth-child(11) {
+    //z
+    animation-delay: 2.2s;
+}
+
+.profile-text-para .profile-text ul li:nth-child(12) {
+    //e
+    animation-delay: 2.4s;
+}
+
+.profile-text-para .profile-text ul li:nth-child(13) {
+    //d
+    animation-delay: 2.6s;
+}
+
+.profile-text-para .profile-text ul li:nth-child(14) {
+    //V
+    animation-delay: 2.8s;
+}
+
+.profile-text-para .profile-text ul li:nth-child(15) {
+    //e
+    animation-delay: 3s;
+}
+
+.profile-text-para .profile-text ul li:nth-child(16) {
+    //r
+    animation-delay: 3.2s;
+}
+
+.profile-text-para .profile-text ul li:nth-child(17) {
+    //i
+    animation-delay: 3.4s;
+}
+
+.profile-text-para .profile-text ul li:nth-child(18) {
+    //f
+    animation-delay: 3.6s;
+}
+
+.profile-text-para .profile-text ul li:nth-child(19) {
+    //i
+    animation-delay: 3.8s;
+}
+
+.profile-text-para .profile-text ul li:nth-child(20) {
+    //c
+    animation-delay: 4s;
+}
+
+.profile-text-para .profile-text ul li:nth-child(21) {
+    //a
+    animation-delay: 4.2s;
+}
+
+.profile-text-para .profile-text ul li:nth-child(22) {
+    //t
+    animation-delay: 4.4s;
+}
+
+.profile-text-para .profile-text ul li:nth-child(23) {
+    //i
+    animation-delay: 4.6s;
+}
+
+.profile-text-para .profile-text ul li:nth-child(24) {
+    //o
+    animation-delay: 4.8s;
+}
+
+.profile-text-para .profile-text ul li:nth-child(25) {
+    //n
+    animation-delay: 5s;
+}
+
+
+.profile-image-dec {
+    width: 119px;
+    height: 106px;
+    position: absolute;
+    left: calc(82%);
+    // transform: translateX(-50%);
+    animation: rotateImage 10s linear 1;
+}
+
+@keyframes rotateImage {
+    0% {
+        transform: rotate(0deg);
+        /* Start rotation from 0 degrees */
+    }
+
+    100% {
+        transform: rotate(360deg);
+        /* Rotate to 360 degrees */
+    }
+}
+
+.profile-text {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+}
